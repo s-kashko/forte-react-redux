@@ -1,5 +1,6 @@
 import { starshipsAPI } from '../../services/starshipsService';
 import { setStarshipsLoading, starshipsInzDone } from './loading';
+import { setError } from './errors';
 
 export const SET_STARSHIPS = 'SET_STARSHIPS';
 export const UPDATE_STARSHIP = 'UPDATE_STARSHIP';
@@ -17,11 +18,16 @@ export const setStarships = (starships) => (dispatch) => {
 }
 
 export const getStarshipsData = () => async (dispatch) => {
-  dispatch(setStarshipsLoading(true));
-  const starships = await starshipsAPI.getStarships();
-  dispatch(setStarshipsAC(starships));
-  dispatch(setStarshipsLoading(false));
-  localStorage.setItem('swapi-starships', JSON.stringify(starships))
+  try {
+    dispatch(setStarshipsLoading(true));
+    const starships = await starshipsAPI.getStarships();
+    dispatch(setStarshipsAC(starships));
+    localStorage.setItem('swapi-starships', JSON.stringify(starships))
+  } catch (err) {
+    dispatch(setError(err.message))
+  } finally {
+    dispatch(setStarshipsLoading(false));
+  }
 }
 
 function addNewStarshipAC(starship) {

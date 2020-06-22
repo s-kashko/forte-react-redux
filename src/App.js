@@ -7,12 +7,14 @@ import { getStarshipsData, setStarships } from "./store/actions/starships";
 import { getAllPeople } from './store/selectors/people';
 import { getAllPlanets } from './store/selectors/planets';
 import { getAllStarships } from './store/selectors/starships';
+import { resetError } from './store/actions/errors';
 import PeoplePage from "./components/pages/PeoplePage";
 import PlanetsPage from "./components/pages/PlanetsPage";
 import StarshipsPage from "./components/pages/StarshipsPage";
 import PeopleForm from "./components/forms/PeopleForm";
 import Navbar from "./components/Navbar";
 import Error404 from "./components/common/Error404/Error404";
+import CommonError from './components/common/CommonError/CommonError';
 import PlanetsForm from './components/forms/PlanetsForm';
 import StarshipsForm from './components/forms/StarshipsForm';
 import "bootstrap/dist/css/bootstrap.css";
@@ -27,6 +29,7 @@ function App() {
     const people = useSelector(state => getAllPeople(state));
     const planets = useSelector(state => getAllPlanets(state));
     const starships = useSelector(state => getAllStarships(state));
+    const errors = useSelector(state => state.errors.errors)
 
 
     useEffect(() => {
@@ -51,10 +54,18 @@ function App() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pathname]);
 
+    const dispatchResetError = (id) => dispatch(resetError(id))
+
+    const errorsArr = errors.length
+        ? errors.map((err) =>
+            <CommonError message={err.message} id={err.id} resetError={dispatchResetError} key={err.id} />)
+        : null
+
     return (
         <>
             <Navbar />
             <main className="container">
+                {errors.length > 0 && <div className='errorsBox'>{errorsArr}</div>}
                 <Switch>
                     <Redirect exact from="/" to="/people" />
                     <Route path="/people/:id" render={props => <PeopleForm {...props} />} />

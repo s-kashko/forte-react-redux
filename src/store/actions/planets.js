@@ -1,5 +1,6 @@
 import { planetsAPI } from '../../services/planetsService';
 import { setPlanetsLoading, planetsInzDone, peopleInzDone } from './loading';
+import { setError } from './errors';
 
 export const SET_PLANETS = 'SET_PLANETS';
 export const UPDATE_PLANET = 'UPDATE_PLANET';
@@ -17,12 +18,17 @@ export const setPlanets = (planets) => (dispatch) => {
 }
 
 export const getPlanetsData = () => async (dispatch) => {
-  dispatch(setPlanetsLoading(true));
-  const planets = await planetsAPI.getPlanets();
-  dispatch(setPlanetsAC(planets));
-  dispatch(setPlanetsLoading(false));
-  localStorage.setItem('swapi-planets', JSON.stringify(planets))
-  dispatch(peopleInzDone())
+  try {
+    dispatch(setPlanetsLoading(true));
+    const planets = await planetsAPI.getPlanets();
+    dispatch(setPlanetsAC(planets));
+    localStorage.setItem('swapi-planets', JSON.stringify(planets))
+    dispatch(peopleInzDone())
+  } catch (err) {
+    dispatch(setError(err.message))
+  } finally {
+    dispatch(setPlanetsLoading(false));
+  }
 }
 
 function addNewPlanetAC(planet) {

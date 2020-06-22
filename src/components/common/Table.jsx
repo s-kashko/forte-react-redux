@@ -1,6 +1,7 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import Button from './Button';
+import './Table.css';
 
 const Table = ({ columns, data, onDelete, tableDescriptor, isLoading, isInitializing }) => {
   const createKey = (value) => {
@@ -20,7 +21,7 @@ const Table = ({ columns, data, onDelete, tableDescriptor, isLoading, isInitiali
         <tr>
           <th scope="col">{tableDescriptor}</th>
           {columns.map((column) => (
-            <th key={createKey(column.colName)} scope="col">
+            <th key={createKey(column.colName)} scope="col" className="cellHeader">
               {column.colName}
             </th>
           ))}
@@ -31,7 +32,11 @@ const Table = ({ columns, data, onDelete, tableDescriptor, isLoading, isInitiali
           <tr key={createKey(item.name)}>
             <th scope="row">{++index}</th>
             {columns.map((column) => {
-              return <td key={createKey(item.name)}>{renderCell(item, column)}</td>;
+              return (
+                <td key={createKey(item.name)} className="tableCell">
+                  {renderCell(item, column)}
+                </td>
+              );
             })}
             <td>
               <Button onClick={() => onDelete(item.id)} classes="btn btn-danger" label="Delete" />

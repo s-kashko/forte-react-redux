@@ -4,7 +4,7 @@ export default {
     default: (value) => {
         const { error: { message } = {} } = Joi.string()
             .min(3)
-            .max(150)
+            .max(30)
             .required()
             .validate(value);
         return message ? message : '';

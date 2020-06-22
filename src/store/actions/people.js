@@ -1,5 +1,6 @@
 import { peopleAPI } from '../../services/peopleService';
 import { setPeopleLoading, peopleInzDone } from './loading';
+import { setError } from './errors';
 
 export const SET_PEOPLE = 'SET_PEOPLE';
 export const UPDATE_PERSON = 'UPDATE_PERSON';
@@ -17,12 +18,17 @@ export const setPeople = (people) => (dispatch) => {
 }
 
 export const getPeopleData = () => async (dispatch) => {
-  dispatch(setPeopleLoading(true));
-  const people = await peopleAPI.getPeople();
-  dispatch(setPeopleAC(people));
-  dispatch(setPeopleLoading(false));
-  localStorage.setItem('swapi-people', JSON.stringify(people));
-  dispatch(peopleInzDone());
+  try {
+    dispatch(setPeopleLoading(true));
+    const people = await peopleAPI.getPeople();
+    dispatch(setPeopleAC(people));
+    localStorage.setItem('swapi-people', JSON.stringify(people));
+    dispatch(peopleInzDone());
+  } catch (err) {
+    dispatch(setError(err.message))
+  } finally {
+    dispatch(setPeopleLoading(false));
+  }
 }
 
 function addNewPersonAC(person) {
