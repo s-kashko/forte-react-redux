@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/starwars/static/css/main.13e3b368.chunk.css",
-    "main.js": "/starwars/static/js/main.d5fd8bd8.chunk.js",
-    "main.js.map": "/starwars/static/js/main.d5fd8bd8.chunk.js.map",
-    "runtime-main.js": "/starwars/static/js/runtime-main.971f9adc.js",
-    "runtime-main.js.map": "/starwars/static/js/runtime-main.971f9adc.js.map",
-    "static/css/2.829c9cb5.chunk.css": "/starwars/static/css/2.829c9cb5.chunk.css",
-    "static/js/2.103952fb.chunk.js": "/starwars/static/js/2.103952fb.chunk.js",
-    "static/js/2.103952fb.chunk.js.map": "/starwars/static/js/2.103952fb.chunk.js.map",
-    "index.html": "/starwars/index.html",
-    "precache-manifest.6c986ce4fbcf8a917f78eb46c955d7a0.js": "/starwars/precache-manifest.6c986ce4fbcf8a917f78eb46c955d7a0.js",
-    "service-worker.js": "/starwars/service-worker.js",
-    "static/css/2.829c9cb5.chunk.css.map": "/starwars/static/css/2.829c9cb5.chunk.css.map",
-    "static/css/main.13e3b368.chunk.css.map": "/starwars/static/css/main.13e3b368.chunk.css.map",
-    "static/js/2.103952fb.chunk.js.LICENSE.txt": "/starwars/static/js/2.103952fb.chunk.js.LICENSE.txt",
-    "static/media/Preloader.svg": "/starwars/static/media/Preloader.e749583c.svg",
-    "static/media/CommonError.module.css": "/starwars/static/media/error.669ab4de.png"
+    "main.css": "/forte-react-redux/static/css/main.8a0ab81f.chunk.css",
+    "main.js": "/forte-react-redux/static/js/main.d5fd8bd8.chunk.js",
+    "main.js.map": "/forte-react-redux/static/js/main.d5fd8bd8.chunk.js.map",
+    "runtime-main.js": "/forte-react-redux/static/js/runtime-main.69a82e68.js",
+    "runtime-main.js.map": "/forte-react-redux/static/js/runtime-main.69a82e68.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/forte-react-redux/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.103952fb.chunk.js": "/forte-react-redux/static/js/2.103952fb.chunk.js",
+    "static/js/2.103952fb.chunk.js.map": "/forte-react-redux/static/js/2.103952fb.chunk.js.map",
+    "index.html": "/forte-react-redux/index.html",
+    "precache-manifest.29126c72cba1bce88788e98e1788a11e.js": "/forte-react-redux/precache-manifest.29126c72cba1bce88788e98e1788a11e.js",
+    "service-worker.js": "/forte-react-redux/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/forte-react-redux/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.8a0ab81f.chunk.css.map": "/forte-react-redux/static/css/main.8a0ab81f.chunk.css.map",
+    "static/js/2.103952fb.chunk.js.LICENSE.txt": "/forte-react-redux/static/js/2.103952fb.chunk.js.LICENSE.txt",
+    "static/media/Preloader.svg": "/forte-react-redux/static/media/Preloader.e749583c.svg",
+    "static/media/CommonError.module.css": "/forte-react-redux/static/media/error.669ab4de.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.971f9adc.js",
+    "static/js/runtime-main.69a82e68.js",
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.103952fb.chunk.js",
-    "static/css/main.13e3b368.chunk.css",
+    "static/css/main.8a0ab81f.chunk.css",
     "static/js/main.d5fd8bd8.chunk.js"
   ]
 }
