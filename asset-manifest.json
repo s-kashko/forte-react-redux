@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/forte-react-redux/static/css/main.8a0ab81f.chunk.css",
-    "main.js": "/forte-react-redux/static/js/main.d5fd8bd8.chunk.js",
-    "main.js.map": "/forte-react-redux/static/js/main.d5fd8bd8.chunk.js.map",
+    "main.css": "/forte-react-redux/static/css/main.2295e150.chunk.css",
+    "main.js": "/forte-react-redux/static/js/main.735dbd3d.chunk.js",
+    "main.js.map": "/forte-react-redux/static/js/main.735dbd3d.chunk.js.map",
     "runtime-main.js": "/forte-react-redux/static/js/runtime-main.69a82e68.js",
     "runtime-main.js.map": "/forte-react-redux/static/js/runtime-main.69a82e68.js.map",
     "static/css/2.829c9cb5.chunk.css": "/forte-react-redux/static/css/2.829c9cb5.chunk.css",
     "static/js/2.103952fb.chunk.js": "/forte-react-redux/static/js/2.103952fb.chunk.js",
     "static/js/2.103952fb.chunk.js.map": "/forte-react-redux/static/js/2.103952fb.chunk.js.map",
     "index.html": "/forte-react-redux/index.html",
-    "precache-manifest.16e792bdf49e186a728de5563925bb98.js": "/forte-react-redux/precache-manifest.16e792bdf49e186a728de5563925bb98.js",
+    "precache-manifest.32f90ff99f9d5d7d6c2e95cbfc0f7636.js": "/forte-react-redux/precache-manifest.32f90ff99f9d5d7d6c2e95cbfc0f7636.js",
     "service-worker.js": "/forte-react-redux/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/forte-react-redux/static/css/2.829c9cb5.chunk.css.map",
-    "static/css/main.8a0ab81f.chunk.css.map": "/forte-react-redux/static/css/main.8a0ab81f.chunk.css.map",
+    "static/css/main.2295e150.chunk.css.map": "/forte-react-redux/static/css/main.2295e150.chunk.css.map",
     "static/js/2.103952fb.chunk.js.LICENSE.txt": "/forte-react-redux/static/js/2.103952fb.chunk.js.LICENSE.txt",
     "static/media/Preloader.svg": "/forte-react-redux/static/media/Preloader.e749583c.svg",
-    "static/media/CommonError.module.css": "/forte-react-redux/static/media/error.669ab4de.png"
+    "static/media/CommonError.module.css": "/forte-react-redux/static/media/error.669ab4de.png",
+    "static/media/App.css": "/forte-react-redux/static/media/stars-background.e3a73f0f.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.69a82e68.js",
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.103952fb.chunk.js",
-    "static/css/main.8a0ab81f.chunk.css",
-    "static/js/main.d5fd8bd8.chunk.js"
+    "static/css/main.2295e150.chunk.css",
+    "static/js/main.735dbd3d.chunk.js"
   ]
 }
