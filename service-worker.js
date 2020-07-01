@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/forte-react-redux/precache-manifest.3caa3d2442b0f07b61bcdb227311e853.js"
+  "/forte-react-redux/precache-manifest.901bfd924c3506337636307d9c18b897.js"
 );
 
 self.addEventListener('message', (event) => {
